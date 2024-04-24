@@ -1,0 +1,11 @@
+{
+  "name": "orlog",
+  "version": "0.0.1",
+  "description": "AC Valhalla inspired luck and strategy game",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Moinak Dey",
+  "license": "ISC"
+}
