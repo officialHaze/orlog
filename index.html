@@ -6,30 +6,86 @@
     <title>Orlog Online</title>
   </head>
   <body>
-    <div id="board">
+    <div id="board" style="display: flex; gap: 10rem;">
+      <div id="roll-area">
       <!-- Player 1 section -->
-      <section id="player1-section">
-        <h1>Player 1</h1>
-        <div id="dice-area-1"></div>
+      <section id="player1-section" style="margin-bottom: 7rem;">
+        <h1>Player 1 <span>(<i id="player-1-health-point"></i>)</span></h1>
+        <div id="dice-area-1" style="display: flex; align-items: center; gap: 1rem; padding: 1rem;"></div>
         <button id="dice-roll-button-1">Roll dice</button>
         <br />
         <h2>Selected dices</h2>
-        <div id="selected-dices-area-1"></div>
+        <div id="selected-dices-area-1" style="display: flex; align-items: center; gap: 1rem; padding: 1rem;"></div>
         <button id="confirm-selection-1">Confirm Selection</button>
       </section>
 
       <!-- Player 2 section -->
       <section id="player2-section">
-        <h1>Player 2</h1>
-        <div id="dice-area-2"></div>
+        <h1>Player 2 <span>(<i id="player-2-health-point"></i>)</span></h1>
+        <div id="dice-area-2" style="display: flex; align-items: center; gap: 1rem; padding: 1rem;"></div>
         <button id="dice-roll-button-2">Roll dice</button>
         <br />
         <h2>Selected dices</h2>
-        <div id="selected-dices-area-2"></div>
+        <div id="selected-dices-area-2" style="display: flex; align-items: center; gap: 1rem; padding: 1rem;"></div>
         <button id="confirm-selection-2">Confirm Selection</button>
       </section>
+      </div>
+
+      <div id="resolution-area" style="display: none;">
+        <h2>Resolution area</h2>
+        <table id="resolution-table">
+            <thead>
+              <tr>
+                <td style="padding: 1rem;"></td>
+                <td style="padding: 1rem;">Arrow Attacks</td>
+                <td style="padding: 1rem;">Axe Attacks</td>
+                <td style="padding: 1rem;">Arrow Defences</td>
+                <td style="padding: 1rem;">Axe Defences</td>
+                <td style="padding: 1rem;">Steal</td>
+                <td style="padding: 1rem;">Favor Tokens</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr id="player-1-res-table-row">
+                <td style="padding: 1rem;">Player 1</td>
+                <td id="player-1-arrow-attacks" style="text-align: center;"></td>
+                <td id="player-1-axe-attacks" style="text-align: center;"></td>
+                <td id="player-1-arrow-defences" style="text-align: center;"></td>
+                <td id="player-1-axe-defences" style="text-align: center;"></td>
+                <td id="player-1-steal" style="text-align: center;"></td>
+                <td id="player-1-favor-tokens" style="text-align: center;"></td>
+              </tr>
+            </tbody>
+
+            <thead>
+              <tr>
+                <td style="padding: 1rem;"></td>
+                <td style="padding: 1rem;">Arrow Defences</td>
+                <td style="padding: 1rem;">Axe Defences</td>
+                <td style="padding: 1rem;">Arrow Attacks</td>
+                <td style="padding: 1rem;">Axe Attacks</td>
+                <td style="padding: 1rem;">Steal</td>
+                <td style="padding: 1rem;">Favor Tokens</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr id="player-2-res-table-row">
+                <td style="padding: 1rem;">Player 2</td>
+                <td id="player-2-arrow-defences" style="text-align: center;"></td>
+                <td id="player-2-axe-defences" style="text-align: center;"></td>
+                <td id="player-2-arrow-attacks" style="text-align: center;"></td>
+                <td id="player-2-axe-attacks" style="text-align: center;"></td>
+                <td id="player-2-steal" style="text-align: center;"></td>
+                <td id="player-2-favor-tokens" style="text-align: center;"></td>
+              </tr>
+            </tbody>
+        </table>
+        <button id="next-roll-phase">Next round</button>
+      </div>
     </div>
 
     <script src="./build/app.js"></script>
   </body>
 </html>
+
+
