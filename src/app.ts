@@ -140,9 +140,7 @@ class Player {
   }
 
   public deductHealthPoint(points: number) {
-    console.log("Deducting health points");
     this.health = points <= this.health ? this.health - points : 0; // Deduct health points only when the points are lesser than the overall health
-    console.log({ deductedHealthPoints: this.health });
     // Update the UI
     this.renderHealthPoints();
   }
@@ -164,7 +162,7 @@ class Player {
       }
 
       // Increment game round by 1
-      Game.increaseRound();
+      // Game.increaseRound();
     });
   }
 
@@ -415,10 +413,10 @@ class Game {
     });
   }
 
-  public static increaseRound() {
-    this.totalRounds++;
-    this.checkForNextPhase();
-  }
+  // public static increaseRound() {
+  //   this.totalRounds++;
+  //   this.checkForNextPhase();
+  // }
 
   private static checkForNextPhase() {
     if (this.player1.getConfirmedStatus() === true && this.player2.getConfirmedStatus() === true) {
